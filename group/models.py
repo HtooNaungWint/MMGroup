@@ -1,7 +1,6 @@
 from atexit import register
 from enum import unique
 from pydoc import describe
-from tkinter import CASCADE
 from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
