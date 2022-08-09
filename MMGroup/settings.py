@@ -124,8 +124,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-LOGIN_REDIRECT_URL = 'login'
-LOGOUT_REDIRECT_URL = 'logout'
+LOGIN_URL = '/accounting/login'
+LOGOUT_URL = '/accounting/logout'
+LOGIN_REDIRECT_URL = '/group/list'
+LOGOUT_REDIRECT_URL = '/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

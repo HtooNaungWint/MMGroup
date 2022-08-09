@@ -4,7 +4,9 @@
 
 {% block post_content %}
 <h4>Create New Post</h4>
-<form method="POST" action="{% url 'post:create' %}" id="postForm">
+<form method="POST" 
+{% comment %} action="{% url 'post:create' %}"  {% endcomment %}
+id="postForm">
 	{% csrf_token %}
 	{% bootstrap_form form %}
 	<input type="submit" value="Post" class="btn btn-primary btn-large">

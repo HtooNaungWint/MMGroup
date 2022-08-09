@@ -26,7 +26,7 @@ class Post(models.Model):
     message_html = models.TextField(editable=False)
     public= models.BooleanField(default=False)
     #group = models.ForeignKey(Group, related_name="posts", on_delete=models.CASCADE)
-    group = models.ForeignKey(Group, related_name="posts",null=True, blank=True,on_delete=models.CASCADE)
+    group = models.ForeignKey(Group, related_name="posts",null=False, blank=False,on_delete=models.CASCADE)
 
 
     def __str__(self):

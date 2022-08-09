@@ -34,7 +34,7 @@ class Group(models.Model):
         super().save(*args,**kwargs)
 
     def get_absolute_url(self):
-        return reverse("group:detail", kwargs={"slug": self.slug,"pk":self.pk})
+        return reverse("group:detail", kwargs={"slug": self.slug})
     
 
  

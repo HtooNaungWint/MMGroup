@@ -1,0 +1,33 @@
+# Name                    Version                   Build  Channel
+asgiref                   3.4.1              pyhd3eb1b0_0  
+bzip2                     1.0.8                h620ffc9_4  
+ca-certificates           2022.07.19           hca03da5_0  
+certifi                   2022.6.15       py310hca03da5_0  
+cffi                      1.15.1                   pypi_0    pypi
+django                    3.2.5              pyhd3eb1b0_0  
+django-bootstrap3         21.2                     pypi_0    pypi
+django-bootstrap5         22.1                     pypi_0    pypi
+django-braces             1.15.0                   pypi_0    pypi
+krb5                      1.19.2               h3b8d789_0  
+libcxx                    12.0.0               hf6beb65_1  
+libedit                   3.1.20210910         h1a28f6b_0  
+libffi                    3.4.2                hc377ac9_4  
+libpq                     12.9                 h65cfe13_3  
+misaka                    2.1.1                    pypi_0    pypi
+ncurses                   6.3                  h1a28f6b_3  
+openssl                   1.1.1q               h1a28f6b_0  
+pip                       22.1.2          py310hca03da5_0  
+psycopg2                  2.8.6           py310hf27765b_1  
+pycparser                 2.21                     pypi_0    pypi
+python                    3.10.4               hbdb9e5c_0  
+pytz                      2022.1          py310hca03da5_0  
+readline                  8.1.2                h1a28f6b_1  
+setuptools                61.2.0          py310hca03da5_0  
+sqlite                    3.39.0               h1058600_0  
+sqlparse                  0.4.1                      py_0  
+tk                        8.6.12               hb8d0fd4_0  
+typing_extensions         4.1.1              pyh06a4308_0  
+tzdata                    2022a                hda174b7_0  
+wheel                     0.37.1             pyhd3eb1b0_0  
+xz                        5.2.5                h1a28f6b_1  
+zlib                      1.2.12               h5a0b063_2  

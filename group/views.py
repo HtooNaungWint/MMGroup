@@ -16,7 +16,7 @@ class CreateGroup(LoginRequiredMixin,CreateView):
     fields = ('name','descriptions' )
     model = Group
      
-class DetailGroup(DetailView):
+class DetailGroup(LoginRequiredMixin,DetailView):
     model = Group
 
     
@@ -26,6 +26,7 @@ class ListGroup(ListView):
 
 
 class JoinGroup(LoginRequiredMixin, RedirectView):
+    print("hello there")
     def get_redirect_url(self, *args, **kwargs):
         return reverse('group:detail', kwargs={'slug':self.kwargs.get('slug')})
     
@@ -53,6 +54,6 @@ class LeaveGroup(LoginRequiredMixin, RedirectView):
             messages.warning(self.request,('You are not in the group'))
         else:
             MemberData.delete()
-            messages.success(self.request,('Bye Bye '+self.request.user))
+            messages.success(self.request,('Bye Bye '))
              
         return super().get(request, *args, **kwargs)

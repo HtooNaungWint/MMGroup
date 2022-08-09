@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,30 +23,31 @@
 
  <ul class="nav justify-content-center">  
   <li class="nav-item">
-    <a href="{% url 'home' %}" class="btn btn-simple">MMGroup</a>
+    <a href="{% url 'home' %}" class="btn btn-simple fw-bold pb-1"><img class="img-fluid w-25 me-3" src="{% static 'images/favicon_small.png' %}" >MMGroup</a>
   </li>
+      <li class="nav-item ms-2">
+      <a href="{% url 'post:list' %}" class="btn btn-simple mt-1  me-3">Post</a>
+    </li>
   {% if user.is_authenticated %}
+
     <li class="nav-item">
-      <a href="{% url 'post:list' %}" class="btn btn-simple">Post</a>
+    <a href="{% url 'group:list' %}" class="btn btn-simple mt-1  me-3">Groups</a>
     </li>
     <li class="nav-item">
-    <a href="{% url 'group:list' %}" class="btn btn-simple">Groups</a>
+    <a href="{% url 'group:create' %}" class="btn btn-simple mt-1  me-3">Create Group</a>
     </li>
     <li class="nav-item">
-    <a href="{% url 'group:create' %}" class="btn btn-simple">Create Group</a>
-    </li>
-    <li class="nav-item">
-    <a href="{% url 'accounting:logout' %}" class="btn btn-simple">Log out</a>
+    <a href="{% url 'accounting:logout' %}" class="btn btn-simple mt-1 me-3">Log out</a>
     </li>
   {% else %}
-    <li  class="nav-item"><a href="#" class="btn btn-simple">Groups</a></li>
+    <li  class="nav-item ms-2"><a href="{% url 'group:list' %}" class="btn btn-simple mt-1  me-3">Groups</a></li>
     <li  class="nav-item">
-      <a href="{% url 'accounting:login' %}" class="btn btn-simple"
+      <a href="{% url 'accounting:login' %}" class="btn btn-simple mt-1  me-3"
         >Log in</a
       >
     </li>
     <li  class="nav-item">
-      <a href="{% url 'accounting:signup' %}" class="btn btn-simple"
+      <a href="{% url 'accounting:signup' %}" class="btn btn-simple mt-1  me-3"
         >Sign up</a
       >
     </li>

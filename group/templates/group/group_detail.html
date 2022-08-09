@@ -5,20 +5,21 @@
 
 <div class="content">
   {% if user in group.members.all %}
-  <a href="#" class="btn btn-warning"
+  <a href="{% url 'group:leave' slug=group.slug  %}" class="btn btn-warning"
     ><span class="glyphicon glyphicon-remove-cycle"></span>Leave</a
   >
   {% else %}
-  <a href="#" class="btn btn-primary"
+  <a href="{% url 'group:join' slug=group.slug %}" class="btn btn-primary"
     ><span class="glyphicon glyphicon-remove-cycle"></span>Join</a
-  >      <a href="{% url 'post:create' %}" class="btn btn-md btn-fill btn-primary">
-      <span class="glyphicon glyphicon-plus-sign"></span> Create New Post!</a>
+  >      
   {% endif %}
+    <a href="{% url 'post:create'%}" class="btn btn-md btn-fill btn-primary">
+      <span class="glyphicon glyphicon-plus-sign"></span> Create New Post!</a>
 </div>
 {% endblock %} 
 
 {% block main_content%}
-<div class="col-md-8">
+<div class="col-md-8 mt-3">
   {% if group.posts.count == 0 %}
   <h2>No post fond in the group yet</h2>
   <h2>be the first person to create the post 😀 😀</h2>
