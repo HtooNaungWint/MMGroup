@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+
+    <title>############# //TODO TITLE ##############</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-default navbar"
+      role="navigation"
+      id="navbar-main"
+    >
+      <div class="container">
+        <a class="navbar-brand nav-link" href="{% url 'home' %}">MMGroup</a>
+
+        <ul class="nav navbar-nav navbar-right">
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'post:list' %}" class="btn btn-simple">Post</a></li>
+          <li><a href="{% url 'group:list' %}" class="btn btn-simple">Groups</a></li>
+          <li><a href="{% url 'group:create' %}" class="btn btn-simple">Create Group</a></li>
+          <li>
+            <a href="{% url 'accounting:logout' %}" class="btn btn-simple"
+              >Log out</a
+            >
+          </li>
+          {% else %}
+          <li><a href="#" class="btn btn-simple">Groups</a></li>
+          <li>
+            <a href="{% url 'accounting:login' %}" class="btn btn-simple"
+              >Log in</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'accounting:signup' %}" class="btn btn-simple"
+              >Sign up</a
+            >
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">{% block content %} {% endblock %}</div>
+  </body>
+</html>
